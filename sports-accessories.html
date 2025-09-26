@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .pr-cards{
+        width: 100%;
+        display: flex;
+        gap: 5%;
+        flex-wrap: wrap;
+        padding-left: 5%;
+        padding-right: 2%;
+      }
+      .card{
+        margin-top: -3%;
+        box-shadow: 0 0 10px gray;
+      }
+
+      .carousel-item img{
+        height: 700px;
+      }
+      .brand img{
+        border: none;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin-top: 5%;
+        margin-left: 5%;
+        object-fit: cover;
+        box-shadow: 0 0 10px gray;
+      }
+      #brands{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10.5%;
+        margin-left: 5%;
+        margin-top: 4%;
+      }
+      .brand img:hover{
+        border: solid 4px gray;
+        transform: scale(1.1);
+        transition: .5s ease;
+      }
+      .container-fluid img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: contain;
+      }
+      .pr-cards .btn{
+        background-color:#00cc99;
+        border: none;
+        border-radius: 35px;
+        box-shadow: 0 0 6px gray;
+      }
+      .card h5{
+        font-weight: bold;
+      }
+      #category .card{
+        margin-top: 5%;
+      }
+      #category {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      #category h5{
+        font-size: 150%;
+        text-align: center;
+        padding-top: 5%;
+      }
+      #category .card:hover{
+        transform: scale(1.05);
+        transition: .4s ease;
+      }
+      footer a{
+        text-decoration: none;
+        list-style: none;
+        line-height: 250%;
+        color: black;
+      }
+      footer h5{
+        padding-top: 2%;
+        font-weight: bold;
+      }
+      .footer-grid{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5%;
+        margin-left: 4%;
+        margin-top: 3%;
+        text-decoration: none;
+      }
+      .foot li{
+        list-style: none;
+      }
+      .fa-brands{
+        color: black;
+        font-size: 45px;
+      }
+      .fa-solid{
+        color: black;
+        font-size: 45px;
+      }
+      .last-foot{
+        padding-top: 2%;
+        margin-bottom: 4%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5%;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .d-flex button:hover{
+        background-color: rgb(102, 102, 102);
+      }
+      .champ{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 9%;
+        margin-bottom: 5%;
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <nav style="padding: 0; margin: 0; position: sticky; top: 0; z-index: 10;" class="navbar navbar-expand-lg bg-body-tertiary">
+  <div style="background-color: white ; height: 70px; box-shadow: 0 0 5px gray; border: none;" class="container-fluid">
+    <a class="navbar-brand" href="#"><img style="width: 45px; margin-left: 40%;" src="https://i.pinimg.com/1200x/a9/32/81/a93281ef621d493cab24c32b3c72ccbf.jpg" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a style="margin-left: 20%; color:rgb(91, 90, 90)" class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a style="padding-left: 18%;" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categories
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Football Boots</a></li>
+            <li><a class="dropdown-item" href="#">Football GK Gloves</a></li>
+            <li><a class="dropdown-item" href="#">Football Shin Guards</a></li>
+            <li><a class="dropdown-item" href="#">Football Balls</a></li>
+            <li><a class="dropdown-item" href="#">Football Turf Boots</a></li>
+            <li><a class="dropdown-item" href="#">Football Kits</a></li>
+            <li><a class="dropdown-item" href="#">Football Socks</a></li>
+            <li><a class="dropdown-item" href="#">Training Equipments</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a style="padding-left: 40%;" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Brands
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://www.nike.com/" target="_blank">Nike</a></li>
+            <li><a class="dropdown-item" href="https://www.adidas.co.in/football" target="_blank">Adidas</a></li>
+            <li><a class="dropdown-item" href="https://in.puma.com/in/en/sports/sports-football/shop-all-football" target="_blank">Puma</a></li>
+            <li><a class="dropdown-item" href="https://www.niviasports.com/" target="_blank">Nivia</a></li>
+            <li><a class="dropdown-item" href="https://www.underarmour.com/en-us/c/mens/sports/soccer/"" target="_blank">Under Armour</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button style="color: black; border: solid 1px black;" class="btn btn-outline-success btn-search" type="submit">Search</button>
+      </form>
+      <i style="font-size: 40px; padding-left: 2%; padding-right: 4%;" class="fa-solid fa-circle-user"></i>
+    </div>
+  </div>
+</nav>
+<section class="pr-carousel">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div data-bs-interval="1000" class="carousel-item active">
+      <img src="download (11) (1)-Picsart-AiImageEnhancer.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div data-bs-interval="2000" class="carousel-item">
+      <img src="https://i.pinimg.com/1200x/9c/3c/69/9c3c69e8a94383618254d3dd9f8ff77a.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div data-bs-interval="2900" class="carousel-item">
+      <img src="https://i.pinimg.com/1200x/be/ff/a5/beffa5f9713dfd95e9a7b7069371518a.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+</section>
+<h1 id="Featured Products" style="padding:5%; font-weight: bold;">Featured Products</h1>
+<section class="pr-cards">
+  <div class="card" style="width: 18rem; height: 80%;">
+  <img height="360px" src="https://i.pinimg.com/736x/ca/12/70/ca12705b10b9841334b29bb95dabe5aa.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Adidas Predator Freak Football Boots</h5>
+    <p class="card-text">$155.00</p>
+    <a href="#" class="btn btn-primary">Add to cart</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem; height: 80%;">
+  <img height="360px" src="Guantes adidas Predator (2).jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Adidas Predator Pro Hybrid GK Gloves</h5>
+    <p class="card-text">$89.44</p>
+    <a href="#" class="btn btn-primary">Add to cart</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem; height: 80%;">
+  <img height="360px" src="https://i.pinimg.com/736x/16/98/3b/16983b7cd6b5782618489e872db6ee3e.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Nike air mercurial superfly 9</h5>
+    <p class="card-text">$3,760</p>
+    <a href="#" class="btn btn-primary">Add to cart</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem; height: 80%;">
+  <img height="360px" src="https://i.pinimg.com/736x/b5/f9/ae/b5f9ae8a916e87f7c3b56d230087bc8a.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Puma Future 19.3 FG Football Boots</h5>
+    <p class="card-text">$124.96</p>
+    <a href="#" class="btn btn-primary">Add to cart</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem; margin-top: 3.5%;">
+  <img height="360px" src="https://i.pinimg.com/1200x/91/4c/1d/914c1d770a71bfad8109412d3d848927.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Nike Tiempo Legend IV Deadpool Edition</h5>
+    <p class="card-text">$300</p>
+    <a href="#" class="btn btn-primary" id="liveAlertBtn">Add to cart</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem; margin-top: 3.5%;">
+  <img height="360px" src="https://i.pinimg.com/1200x/9f/a7/8d/9fa78d6e3f7c9446391ac1d0a854ad6a.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Adidas Predator FG Football Boots</h5>
+    <p class="card-text">$260</p>
+    <a href="#" class="btn btn-primary">Add to cart</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem; margin-top: 3.5%;">
+  <img height="360px" src="https://i.pinimg.com/1200x/fb/ff/23/fbff23c02e06200ab6b51f1d0dac217c.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">FUTURE PRO FG/AG</h5>
+    <p class="card-text">$140</p>
+    <a href="#" class="btn btn-primary">Add to cart</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem; margin-top: 3.5%;">
+  <img height="360px" src="https://i.pinimg.com/736x/de/8b/7e/de8b7e2f3b935b4d9742e3d4121745e4.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Fc Barcelona Kit Special Edition</h5>
+    <p class="card-text">$100</p>
+    <a href="#" class="btn btn-primary">Add to cart</a>
+  </div>
+</div>
+</section>
+<h1 id="Brands" style="padding-left: 5%; padding-top: 5%; font-weight: bold;">Brands</h1>
+<section id="brands">
+  <div class="brand nike">
+    <a href="https://www.nike.com/" target="_blank">
+      <img src="https://i.pinimg.com/736x/e9/4e/5c/e94e5c442f4bc8217adfa9b93ea3bd42.jpg" alt="">
+    </a>
+  </div>
+  <div class="brand adidas">
+    <a href="https://www.adidas.co.in/football" target="_blank">
+      <img src="https://i.pinimg.com/736x/40/13/61/401361e057d5bde0a809b2bf894ecc8b.jpg" alt="">
+    </a>
+  </div>
+  <div class="brand puma">
+    <a href="https://in.puma.com/in/en/sports/sports-football/shop-all-football" target="_blank">
+      <img src="https://i.pinimg.com/1200x/75/91/f5/7591f54aad2fbe1797917f0b28928f42.jpg" alt="">
+    </a>
+  </div>
+  <div class="brand nivia">
+    <a href="https://www.niviasports.com/" target="_blank">
+      <img src="https://imgs.search.brave.com/jjzgczyq3ZHzsux0LpkOM7RvTJurSUrUpiNEfyTanKs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL1Mv/c3RvcmVzLWltYWdl/LXVwbG9hZHMtZXUt/cHJvZC84L0FtYXpv/blN0b3Jlcy9BMjFU/SlJVVU40S0dWL2Ji/MWYwMjMyZTA3NWM1/NjkwYzYxMmM2ZGRm/M2JiYmVjLncxMjAw/LmgxMjAwLl9DUjAs/MCwxMjAwLDEyMDBf/U1gxMDBfLmpwZw" alt="">
+    </a>
+  </div>
+  <div class="brand under-armour">
+    <a href="https://www.underarmour.com/en-us/c/mens/sports/soccer/" target="_blank">
+      <img src="https://i.pinimg.com/1200x/ee/d5/1b/eed51bb5885d0f344f6e4e9175a8f964.jpg" alt="">
+    </a>
+  </div>
+</section>
+<h1 id="Categories" style="padding-left: 5%; padding-top: 5%; font-weight: bold;">Categories</h1>
+<section id="category">
+  <div class="card" style="width: 18rem;">
+    <a href="">
+  <img src="https://i.pinimg.com/1200x/00/85/a8/0085a81b2617b780bcc804e4cbb13930.jpg" class="card-img-top" alt="...">
+  </a>
+  <div class="card-body">
+    <h5>Football Boots</h5>
+  </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+  <a href="">
+  <img src="https://i.pinimg.com/1200x/1e/c2/e7/1ec2e7d6a9ac569c7f57ff7fa69a7fa4.jpg" class="card-img-top" alt="...">
+  </a>
+  <div class="card-body">
+    <h5>Football GK Gloves</h5>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <a href="">
+  <img src="https://i.pinimg.com/1200x/ee/9d/7b/ee9d7bd76bc8ec0d809b1984efc067cd.jpg" class="card-img-top" alt="...">
+  </a>
+  <div class="card-body">
+    <h5>Football Shin Guards</h5>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <a href="">
+  <img src="https://i.pinimg.com/1200x/bf/cc/57/bfcc57626897ceaab752e990aac6e402.jpg" class="card-img-top" alt="...">
+  </a>
+  <div class="card-body">
+    <h5>Football Balls</h5>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <a href="">
+  <img src="https://i.pinimg.com/736x/f7/cd/fc/f7cdfcb54581f704617c13155f4f0f52.jpg" class="card-img-top" alt="...">
+  </a>
+  <div class="card-body">
+    <h5>Football Turf Boots</h5>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <a href="">
+  <img src="https://i.pinimg.com/736x/5a/b5/18/5ab5185da4ad7970cf665e3137d1200a.jpg" class="card-img-top" alt="...">
+  </a>
+  <div class="card-body">
+    <h5>Football Kits</h5>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <a href="">
+  <img src="https://i.pinimg.com/1200x/a6/f1/f5/a6f1f5e8244733a1ffd56fc712ed1efa.jpg" class="card-img-top" alt="...">
+  </a>
+  <div class="card-body">
+    <h5>Football Socks</h5>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <a href="">
+  <img src="https://i.pinimg.com/1200x/ce/04/27/ce0427ca37dab51700140a90e8aafeb0.jpg" class="card-img-top" alt="...">
+  </a>
+  <div class="card-body">
+    <h5>Training Equipments</h5>
+  </div>
+</div>
+</section>
+<section class="champ">
+  <div class="card-group">
+  <div class="card">
+    <a href="">
+    <img src="https://i.pinimg.com/736x/8c/a0/ba/8ca0baddbec72fa1a762d0d337c0b512.jpg" class="card-img-top" alt="...">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title">Premier League Jerseys</h5>
+      <p class="card-text">Discover the iconic kits of England’s top clubs — from Manchester United’s red to Arsenal’s classic designs</p>
+    </div>
+  </div>
+  <div class="card">
+    <a href="">
+    <img src="https://i.pinimg.com/1200x/e2/1c/13/e21c13cfced374d855685a87df9f1311.jpg" class="card-img-top" alt="...">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title">La Liga Jerseys</h5>
+      <p class="card-text">Celebrate Spanish football with jerseys from giants like Real Madrid, Barcelona, and Atlético Madrid</p>
+    </div>
+  </div>
+  <div class="card">
+    <a href="">
+    <img src="https://i.pinimg.com/736x/30/64/36/3064366928090fbaa2e3d8bd460f057c.jpg" class="card-img-top" alt="...">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title">Serie A Jerseys</h5>
+      <p class="card-text">Experience Italian style on the pitch with classic kits from Juventus, AC Milan, and Inter Milan</p>
+    </div>
+  </div>
+  <div class="card">
+    <a href="">
+    <img src="https://i.pinimg.com/1200x/37/aa/3c/37aa3c8ee1919e73bea2f1b4b100795d.jpg" class="card-img-top" alt="...">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title">Bundesliga Jerseys</h5>
+      <p class="card-text">Explore Germany’s finest clubs, including Bayern Munich and Borussia Dortmund, with their bold jersey designs</p>
+    </div>
+  </div>
+  <div class="card">
+    <a href="">
+    <img src="https://i.pinimg.com/1200x/0a/8c/70/0a8c70c7ddcec18daee647e7daf68df0.jpg" class="card-img-top" alt="...">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title">Ligue 1 Jerseys</h5>
+      <p class="card-text">Show your passion for French football with jerseys from PSG, Lyon, and Marseille</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="accordian">
+  <div style="margin-left: 5%; margin-top: 3%; width: 90%; box-shadow: 0 0 5px gray;" class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button style="font-weight: bold;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        ➕ What types of football boots are best for beginners?
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div style="font-weight: lighter;" class="accordion-body">Lightweight, firm-ground boots are good for starters.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button style="font-weight: bold;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        ➕ Do I need different shoes for turf and grass?
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div style="font-weight: lighter;" class="accordion-body">Yes, turf shoes have smaller studs, grass boots have longer studs.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button style="font-weight: bold;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        ➕ Which brands are most popular?
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div style="font-weight: lighter;" class="accordion-body">Nike, Adidas, Puma, and Nivia are among the top choices.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button style="font-weight: bold;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+        ➕ How to clean football boots?
+      </button>
+    </h2>
+    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div style="font-weight: lighter;" class="accordion-body">Wipe mud, use mild soap, let them air dry.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button style="font-weight: bold;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+        ➕ How to wash jerseys properly?
+      </button>
+    </h2>
+    <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div style="font-weight: lighter;" class="accordion-body">Cold wash, don’t use bleach, avoid machine drying.</div>
+    </div>
+  </div>
+</div>
+</section>
+<hr style="margin-top: 4%; width: 90%; margin-left: 5%;">
+<footer>
+  <div class="footer-grid">
+    <div class="foot foot1">
+<ul>
+  <li><h5>About</h5></li>
+  <li><a href="">Who We Are</a></li>
+  <li><a href="">Our Mission</a></li>
+  <li><a href="">Why Choose Us</a></li>
+</ul>
+</div>
+<div class="foot foot2">
+<ul>
+  <li><h5>Quick Links</h5></li>
+  <li><a href="#">Home</a></li>
+  <li><a href="#Featured Products">Featured Products</a></li>
+  <li><a href="#Brands">Brands</a></li>
+  <li><a href="#Categories">Categories</a></li>
+  <li><a href="">Contact Us</a></li>
+</ul>
+</div>
+<div class="foot foot3">
+  <ul>
+    <li><h5>Brands</h5></li>
+    <li><a href="https://www.nike.com/" target="_blank">Nike</a></li>
+    <li><a href="https://www.adidas.co.in/football" target="_blank">Adidas</a></li>
+    <li><a href="https://in.puma.com/in/en/sports/sports-football/shop-all-football" target="_blank">Puma</a></li>
+    <li><a href="https://www.niviasports.com/" target="_blank">Nivia</a></li>
+    <li><a href="https://www.underarmour.com/en-us/c/mens/sports/soccer/" target="_blank">Under Armour</a></li>
+  </ul>
+</div>
+<div class="foot foot4">
+  <ul>
+    <li><h5>Customer Support</h5></li>
+    <li><a href="">FAQ</a></li>
+    <li><a href="">Returns Policy</a></li>
+    <li><a href="">Shipping Info</a></li>
+    <li><a href="">Privacy Policy</a></li>
+  </ul>
+</div>
+</div>
+<hr style="margin-left: 5%; width: 90%;">
+<div class="last-foot">
+  <div style="padding-left: 5%;" class="copy">
+    <p>© 2025 Football Accessories | Educational Purpose Only</p>
+  </div>
+<div style="padding-right: 5%;" class="social">
+    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+    <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+    <a href=""><i class="fa-solid fa-square-envelope"></i></a>
+    <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+</div>
+</div>
+</footer>
+<script src="https://kit.fontawesome.com/5f472baad8.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
